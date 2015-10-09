@@ -8,6 +8,11 @@
 
 import Foundation
 
-protocol CommandHandler {
-    func handle(command command: Command)
+class CommandHandler {
+    required init() {
+    }
+    
+    func handle(command command: Command) {
+        print("You have to override this method !")
+    }
 }

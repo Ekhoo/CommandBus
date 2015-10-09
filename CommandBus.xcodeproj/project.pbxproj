@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		76602D76D6518DD6CE99D35C /* Pods_CommandBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F8C3C605BB965A7B71C6DB /* Pods_CommandBus.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BE5BF8621BC7C369003CEE69 /* configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5BF8611BC7C369003CEE69 /* configuration.json */; settings = {ASSET_TAGS = (); }; };
+		BE7B4D0D1BC7ED7B005B105B /* CustomCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B4D0C1BC7ED7B005B105B /* CustomCommand.swift */; settings = {ASSET_TAGS = (); }; };
+		BE7B4D0F1BC7EE36005B105B /* CustomCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B4D0E1BC7EE36005B105B /* CustomCommandHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		BEDDFB841BC7AFFF00538813 /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDFB811BC7AFFF00538813 /* CommandBus.swift */; settings = {ASSET_TAGS = (); }; };
 		BEDDFB851BC7AFFF00538813 /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDFB821BC7AFFF00538813 /* CommandHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		BEDDFB861BC7AFFF00538813 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDFB831BC7AFFF00538813 /* Command.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +26,9 @@
 		928D8EC354C8E404821F0EAA /* Pods-CommandBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommandBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommandBus/Pods-CommandBus.debug.xcconfig"; sourceTree = "<group>"; };
 		A5FE271C4762F7F2554F13F2 /* Pods-CommandBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommandBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommandBus/Pods-CommandBus.release.xcconfig"; sourceTree = "<group>"; };
 		BE5BF85F1BC7B25A003CEE69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = SOURCE_ROOT; };
+		BE5BF8611BC7C369003CEE69 /* configuration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = configuration.json; path = Example/configuration.json; sourceTree = SOURCE_ROOT; };
+		BE7B4D0C1BC7ED7B005B105B /* CustomCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCommand.swift; path = Example/CustomCommand.swift; sourceTree = SOURCE_ROOT; };
+		BE7B4D0E1BC7EE36005B105B /* CustomCommandHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCommandHandler.swift; path = Example/CustomCommandHandler.swift; sourceTree = SOURCE_ROOT; };
 		BECC89FB1BC7AD9200F252B6 /* CommandBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDFB811BC7AFFF00538813 /* CommandBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandBus.swift; path = Source/CommandBus.swift; sourceTree = SOURCE_ROOT; };
 		BEDDFB821BC7AFFF00538813 /* CommandHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandHandler.swift; path = Source/CommandHandler.swift; sourceTree = SOURCE_ROOT; };
@@ -91,6 +97,9 @@
 				BEE211E71BC7AEE3009AB32B /* ViewController.swift */,
 				BEE211E21BC7AEB5009AB32B /* Assets.xcassets */,
 				BE5BF85F1BC7B25A003CEE69 /* Info.plist */,
+				BE5BF8611BC7C369003CEE69 /* configuration.json */,
+				BE7B4D0C1BC7ED7B005B105B /* CustomCommand.swift */,
+				BE7B4D0E1BC7EE36005B105B /* CustomCommandHandler.swift */,
 			);
 			name = Example;
 			path = CommandBus;
@@ -169,6 +178,7 @@
 			files = (
 				BEE211EE1BC7AF5F009AB32B /* LaunchScreen.storyboard in Resources */,
 				BEE211E31BC7AEB5009AB32B /* Assets.xcassets in Resources */,
+				BE5BF8621BC7C369003CEE69 /* configuration.json in Resources */,
 				BEE211EF1BC7AF5F009AB32B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7B4D0D1BC7ED7B005B105B /* CustomCommand.swift in Sources */,
 				BEDDFB851BC7AFFF00538813 /* CommandHandler.swift in Sources */,
 				BEE211E91BC7AEE3009AB32B /* ViewController.swift in Sources */,
 				BEDDFB841BC7AFFF00538813 /* CommandBus.swift in Sources */,
+				BE7B4D0F1BC7EE36005B105B /* CustomCommandHandler.swift in Sources */,
 				BEDDFB861BC7AFFF00538813 /* Command.swift in Sources */,
 				BEE211E81BC7AEE3009AB32B /* AppDelegate.swift in Sources */,
 			);

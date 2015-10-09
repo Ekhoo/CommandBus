@@ -1,0 +1,3 @@
+{
+    "CommandBus.CustomCommand": "CommandBus.CustomCommandHandler"
+}
