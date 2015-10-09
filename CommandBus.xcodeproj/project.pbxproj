@@ -12,7 +12,6 @@
 		BEDDFB851BC7AFFF00538813 /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDFB821BC7AFFF00538813 /* CommandHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		BEDDFB861BC7AFFF00538813 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDFB831BC7AFFF00538813 /* Command.swift */; settings = {ASSET_TAGS = (); }; };
 		BEE211E31BC7AEB5009AB32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE211E21BC7AEB5009AB32B /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		BEE211E51BC7AEC1009AB32B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEE211E41BC7AEC1009AB32B /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		BEE211E81BC7AEE3009AB32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE211E61BC7AEE3009AB32B /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		BEE211E91BC7AEE3009AB32B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE211E71BC7AEE3009AB32B /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BEE211EE1BC7AF5F009AB32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE211EA1BC7AF5F009AB32B /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -23,12 +22,12 @@
 		70F8C3C605BB965A7B71C6DB /* Pods_CommandBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommandBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928D8EC354C8E404821F0EAA /* Pods-CommandBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommandBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommandBus/Pods-CommandBus.debug.xcconfig"; sourceTree = "<group>"; };
 		A5FE271C4762F7F2554F13F2 /* Pods-CommandBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommandBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommandBus/Pods-CommandBus.release.xcconfig"; sourceTree = "<group>"; };
+		BE5BF85F1BC7B25A003CEE69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = SOURCE_ROOT; };
 		BECC89FB1BC7AD9200F252B6 /* CommandBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDFB811BC7AFFF00538813 /* CommandBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandBus.swift; path = Source/CommandBus.swift; sourceTree = SOURCE_ROOT; };
 		BEDDFB821BC7AFFF00538813 /* CommandHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandHandler.swift; path = Source/CommandHandler.swift; sourceTree = SOURCE_ROOT; };
 		BEDDFB831BC7AFFF00538813 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Source/Command.swift; sourceTree = SOURCE_ROOT; };
 		BEE211E21BC7AEB5009AB32B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Example/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		BEE211E41BC7AEC1009AB32B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = SOURCE_ROOT; };
 		BEE211E61BC7AEE3009AB32B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Example/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		BEE211E71BC7AEE3009AB32B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Example/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		BEE211EB1BC7AF5F009AB32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Example/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -91,7 +90,7 @@
 				BEE211E61BC7AEE3009AB32B /* AppDelegate.swift */,
 				BEE211E71BC7AEE3009AB32B /* ViewController.swift */,
 				BEE211E21BC7AEB5009AB32B /* Assets.xcassets */,
-				BEE211E41BC7AEC1009AB32B /* Info.plist */,
+				BE5BF85F1BC7B25A003CEE69 /* Info.plist */,
 			);
 			name = Example;
 			path = CommandBus;
@@ -169,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE211EE1BC7AF5F009AB32B /* LaunchScreen.storyboard in Resources */,
-				BEE211E51BC7AEC1009AB32B /* Info.plist in Resources */,
 				BEE211E31BC7AEB5009AB32B /* Assets.xcassets in Resources */,
 				BEE211EF1BC7AF5F009AB32B /* Main.storyboard in Resources */,
 			);
