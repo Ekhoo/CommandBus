@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let commandBus = try! CommandBus(configurationFileName: "configuration");
+        let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration");
         let customCommand: CustomCommand = CustomCommand()
             
         commandBus.execute(command: customCommand);

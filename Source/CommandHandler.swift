@@ -13,6 +13,6 @@ class CommandHandler {
     }
     
     func handle(command command: Command) {
-        print("You have to override this method !")
+        print("You have to override this method!")
     }
 }
