@@ -3,6 +3,9 @@
 [![Version](https://img.shields.io/cocoapods/v/CommandBus.svg?style=flat)](http://cocoapods.org/pods/CommandBus)
 [![License](https://img.shields.io/cocoapods/l/CommandBus.svg?style=flat)](http://cocoapods.org/pods/CommandBus)
 [![Platform](https://img.shields.io/cocoapods/p/CommandBus.svg?style=flat)](http://cocoapods.org/pods/CommandBus)
+![](https://img.shields.io/badge/Supported-iOS8-4BC51D.svg?style=flat-square)
+![](https://img.shields.io/badge/Carthage-unavailable-red.svg?style=flat)
+![](https://img.shields.io/badge/Swift 2-compatible-4BC51D.svg?style=flat-square)
 
 A light weight Command Bus implementation written in Swift
 
