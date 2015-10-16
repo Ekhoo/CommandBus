@@ -22,44 +22,42 @@ CommandBus is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "CommandBus", '~> 0.0.1'
+pod "CommandBus", '~> 0.0.2'
 ```
 
 # Usage
-- Create a json mapping file:
+- First, you have to create a json mapping file in order to associate yours Commands with their handler:
 
 ```json
 {
     "{ModuleName}.{CommandName}": "{ModuleName}.{CommandHandlerName}"
 }
 ```
-- Then you can create your `CommandBus` and inject it your mapping file name without the extension.
+
+- Then you can create your Command and inject it to the bus:
 
 ```swift
-    let commandBus: CommandBus = try! CommandBus(configurationFileName: "mappingFileName");
-```
-
-- Create your `CustomCommand` by inhereting from `Command`
-- Create your `CustomCommandHandler` by inhereting from `CommandHandler`
-- You can execute your `Command`:
-```swift
-    let customCommand: CustomCommand = CustomCommand()
-    commandBus.execute(command: customCommand);
-```
-
-# Example
-```json
-{
-    "CommandBus.CustomCommand": "CommandBus.CustomCommandHandler"
-}
-```
-
-```swift
-func myFunc() {
-    let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration");
-    let customCommand: CustomCommand = CustomCommand()
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-    commandBus.execute(command: customCommand);
+        /*** Register to the Command event ***/
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onCommandHandled:", name:"COMMAND_DONE", object: nil)
+        
+        /*** Create the CommandBus ***/
+        let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration")
+        
+        /*** Create your own CommandHandler ***/
+        let customCommand: CustomCommand = CustomCommand()
+        
+        /*** Send your commandHandler to the CommandBus with your event name ***/
+        commandBus.handle(command: customCommand, commandHandledEvent: "COMMAND_DONE")
+    }
+
+    func onCommandHandled(notification: NSNotification) {
+        /*** This method is called when the CommandHandler have done ***/
+        print("Command Handled: \(notification.object!)")
+    }
 }
 ```
 
