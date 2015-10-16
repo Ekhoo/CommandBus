@@ -11,6 +11,6 @@ import Foundation
 class CustomCommandHandler: CommandHandler {
     
     override func handle(command command: Command) {
-        print("Command handled")
+        self.complete(object: "Hello World")
     }
 }

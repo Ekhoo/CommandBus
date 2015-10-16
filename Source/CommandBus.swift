@@ -40,11 +40,11 @@ class CommandBus {
         
         self.mapping = json
     }
-    
-    func execute(command command: Command) {
+
+    func handle(command command: Command, commandHandledEvent: String?) {
         let commandType: String = self.getTypeFromCommand(command: command)
         let handlerType: CommandHandler.Type = self.getHandlerTypeFromCommandType(commandType: commandType)
-        let handler: CommandHandler = handlerType.init()
+        let handler: CommandHandler = handlerType.init(commandHandledEvent: commandHandledEvent)
         
         handler.handle(command: command)
     }

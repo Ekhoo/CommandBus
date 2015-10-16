@@ -13,16 +13,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration");
+        /*** Register to the Command event ***/
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onCommandHandled:", name:"COMMAND_DONE", object: nil)
+        
+        /*** Create the CommandBus ***/
+        let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration")
+        
+        /*** Create your own CommandHandler ***/
         let customCommand: CustomCommand = CustomCommand()
-            
-        commandBus.execute(command: customCommand);
+        
+        /*** Send your commandHandler to the CommandBus with your event name ***/
+        commandBus.handle(command: customCommand, commandHandledEvent: "COMMAND_DONE")
     }
 
+    func onCommandHandled(notification: NSNotification) {
+        /*** This method is called when the CommandHandler have done ***/
+        print("Command Handled: \(notification.object!)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 
 }
 
