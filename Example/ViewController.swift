@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "onCommandHandled:", name:"COMMAND_DONE", object: nil)
         
         /*** Create the CommandBus ***/
-        let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration")
+        let commandBus: CommandBus = CommandBus(configurationFileName: "configuration")!
         
         /*** Create your own CommandHandler ***/
         let customCommand: CustomCommand = CustomCommand()

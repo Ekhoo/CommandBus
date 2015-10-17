@@ -9,33 +9,34 @@
 import Foundation
 import SwiftyJSON
 
-enum CommandBusError: ErrorType {
-    case InvalidFileName
-    case InvalidFileContent
-    case InvalidFileContentType
-}
-
 class CommandBus {
     
     private var mapping: JSON!
     
-    init(configurationFileName: String) throws {
+    init?(configurationFileName: String) {
         let filePath = NSBundle.mainBundle().pathForResource(configurationFileName, ofType:"json")
+        var errorMessage: String?
         
-        if (filePath == nil) {
-            throw CommandBusError.InvalidFileName
+        if filePath == nil {
+            errorMessage = "CommandBus => Configuration file not found!"
         }
         
         let data = NSData(contentsOfFile:filePath!)
 
-        if (data == nil) {
-            throw CommandBusError.InvalidFileContent
+        if data == nil {
+            errorMessage = "CommandBus => Can't read the configuration file!"
         }
 
         let json = JSON(data: data!)
         
         if json == nil {
-            throw CommandBusError.InvalidFileContentType
+            errorMessage = "CommandBus => Can't convert the configuration file into JSON!"
+        }
+        
+        if let error = errorMessage {
+            print(error)
+            
+            return nil
         }
         
         self.mapping = json
