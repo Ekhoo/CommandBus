@@ -22,7 +22,7 @@ CommandBus is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "CommandBus", '~> 0.0.2'
+pod "CommandBus", '~> 0.0.3'
 ```
 
 # Usage
@@ -30,7 +30,9 @@ pod "CommandBus", '~> 0.0.2'
 
 ```json
 {
-    "{ModuleName}.{CommandName}": "{ModuleName}.{CommandHandlerName}"
+    "{CommandNameA}": "{CommandHandlerNameA}",
+    "{CommandNameB}": "{CommandHandlerNameB}",
+    "{CommandNameC}": "{CommandHandlerNameC}"
 }
 ```
 
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "onCommandHandled:", name:"COMMAND_DONE", object: nil)
         
         /*** Create the CommandBus ***/
-        let commandBus: CommandBus = try! CommandBus(configurationFileName: "configuration")
+        let commandBus: CommandBus = CommandBus(configurationFileName: "configuration")!
         
         /*** Create your own CommandHandler ***/
         let customCommand: CustomCommand = CustomCommand()
