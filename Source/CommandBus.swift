@@ -51,9 +51,11 @@ class CommandBus {
     }
     
     private func getHandlerTypeFromCommandType(commandType commandType: String) -> CommandHandler.Type {
-        let handlerType = self.mapping[commandType].string!
+        let types: [String] = commandType.componentsSeparatedByString(".")
+        let moduleName: String = types[0]
+        let handlerType = self.mapping[types[1]].string!
         
-        return NSClassFromString(handlerType) as! CommandHandler.Type
+        return NSClassFromString(String(format: "%@.%@", moduleName, handlerType)) as! CommandHandler.Type
     }
     
     private func getTypeFromCommand(command command: Command) -> String {
