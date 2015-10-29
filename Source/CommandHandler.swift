@@ -16,11 +16,11 @@ public class CommandHandler {
         self.commandHandledEvent = commandHandledEvent
     }
     
-    func handle(command command: Command) {
+    public func handle(command command: Command) {
         print("You have to override this method!")
     }
     
-    func complete(object object: AnyObject?) {
+    public func complete(object object: AnyObject?) {
         if let eventName = self.commandHandledEvent {
             NSNotificationCenter.defaultCenter().postNotificationName(eventName, object: object)
         }
