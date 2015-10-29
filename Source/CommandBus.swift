@@ -13,7 +13,7 @@ public class CommandBus {
     
     private var mapping: JSON!
     
-    init?(configurationFileName: String) {
+    public init?(configurationFileName: String) {
         let filePath = NSBundle.mainBundle().pathForResource(configurationFileName, ofType:"json")
         var errorMessage: String?
         
