@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CommandBus"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "CommandBus is a light weight Command Bus implementation written in Swift"
 
   s.description  = "CommandBus is a light weight Command Bus implementation written in Swift. You can use it in order to facilitate your Command pattern implementation. It's also recommanded to use this pattern in a Domain Driven Design achitecture."
