@@ -42,7 +42,7 @@ public class CommandBus {
         self.mapping = json
     }
 
-    func handle(command command: Command, commandHandledEvent: String?) {
+    public func handle(command command: Command, commandHandledEvent: String?) {
         let commandType: String = self.getTypeFromCommand(command: command)
         let handlerType: CommandHandler.Type = self.getHandlerTypeFromCommandType(commandType: commandType)
         let handler: CommandHandler = handlerType.init(commandHandledEvent: commandHandledEvent)
