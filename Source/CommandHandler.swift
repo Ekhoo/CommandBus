@@ -12,7 +12,7 @@ public class CommandHandler {
     
     let commandHandledEvent: String?
     
-    required public init(commandHandledEvent: String?) {
+    public required init(commandHandledEvent: String?) {
         self.commandHandledEvent = commandHandledEvent
     }
     
