@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class CommandBus {
+public class CommandBus {
     
     private var mapping: JSON!
     

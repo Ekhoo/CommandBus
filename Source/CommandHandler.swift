@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CommandHandler {
+public class CommandHandler {
     
     let commandHandledEvent: String?
     
