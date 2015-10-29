@@ -49,10 +49,10 @@ class ViewController: UIViewController {
         /*** Create the CommandBus ***/
         let commandBus: CommandBus = CommandBus(configurationFileName: "configuration")!
         
-        /*** Create your own CommandHandler ***/
+        /*** Create your own Command ***/
         let customCommand: CustomCommand = CustomCommand()
         
-        /*** Send your commandHandler to the CommandBus with your event name ***/
+        /*** Send your command to the CommandBus with your event name ***/
         commandBus.handle(command: customCommand, commandHandledEvent: "COMMAND_DONE")
     }
 
