@@ -17,7 +17,7 @@ So, the command goes in -> the bus hands it off to a handler -> and then the han
 You can have more informations [here](http://culttt.com/2014/11/10/creating-using-command-bus/).
 
 # Installation
-## Cocoapods
+## CocoaPods
 CommandBus is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
